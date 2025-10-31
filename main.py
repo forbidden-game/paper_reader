@@ -4,13 +4,13 @@ from datetime import datetime
 
 import click
 
-from paper_reader.insight_extractor import InsightExtractor
-from paper_reader.interest_manager import InterestManager
-from paper_reader.models import Paper
-from paper_reader.models import ResearchInterests
-from paper_reader.paper_discovery import PaperDiscoverer
-from paper_reader.paper_ingestor import PaperIngestor
-from paper_reader.paper_store import PaperStore
+from insight_extractor import InsightExtractor
+from interest_manager import InterestManager
+from models import Paper
+from models import ResearchInterests
+from paper_discovery import PaperDiscoverer
+from paper_ingestor import PaperIngestor
+from paper_store import PaperStore
 
 # Initialize managers
 interest_manager = InterestManager()

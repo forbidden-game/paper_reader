@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from datetime import datetime
 from datetime import timedelta
+from datetime import timezone
 from typing import TYPE_CHECKING
 
 import arxiv
@@ -37,7 +38,7 @@ class PaperDiscoverer:
         query = self._build_query(interests)
 
         # Calculate date range
-        end_date = datetime.now()
+        end_date = datetime.now(timezone.utc)
         start_date = end_date - timedelta(days=days)
 
         # Search arXiv
