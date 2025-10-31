@@ -1,6 +1,5 @@
 """Integration tests for paper_reader CLI."""
 
-from pathlib import Path
 from unittest.mock import Mock
 from unittest.mock import patch
 

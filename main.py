@@ -1,9 +1,10 @@
 """Paper Reader CLI."""
 
 from datetime import datetime
+from typing import Literal
+from typing import cast
 
 import click
-
 from insight_extractor import InsightExtractor
 from interest_manager import InterestManager
 from models import Paper
@@ -237,7 +238,7 @@ def update_status(paper_id: str, status: str):
         click.echo(f"❌ Paper {paper_id} not found")
         return
 
-    paper.status = status
+    paper.status = cast(Literal["to-read", "reading", "read"], status)
     paper_store.update(paper)
 
     click.echo(f"✅ Updated {paper.title}")
