@@ -106,7 +106,15 @@ def test_list_all_papers(temp_store, sample_paper):
         pdf_path=None,
         added_date="2025-10-31",
         interests=["signal processing"],
-        insights=None,
+        insights=PaperInsights(
+            problem="Test problem 2",
+            method="Test method 2",
+            key_results="Test results 2",
+            contributions=["Contribution 2"],
+            related_work=["Related 2"],
+            future_directions=["Future 2"],
+            classification="incremental",
+        ),
         status="to-read",
         notes="",
     )
